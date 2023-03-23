@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}  Phone Number {% endblock %}
+
+{% block header %}
+    <h1 class="text-white">Please fill out the information below.</h1>
+{% endblock%}
+
+{% block content%} 
+<div class="row container-fluid">
+    <div class="col">
+        <div class="cardmt-3 container-fluid">
+            <div class="card-body container-fluid">
+                <form action="" method="post">
+                    {{ form.csrf_token }}
+
+                    {{ form.first_name.label }}
+                    {{ form.first_name(class='form-control container-fluid bg-warning w-50', placeholder="Enter First Name") }}
+
+                    {{ form.last_name.label }}
+                    {{ form.last_name(class='form-control', placeholder="Enter Last Name") }}
+
+                    {{ form.address.label }}😛
+                    {{ form.address(class='form-control', placeholder="Enter Address") }}
+
+                    {{ form.phone_number.label }}
+                    {{ form.phone_number(class='form-control', placeholder="Enter Phone Number") }}
+
+                    {{ form.confirm_phone_number.label }}
+                    {{ form.confirm_phone_number(class='form-control', placeholder="Confirm phone number") }}
+
+                    {{ form.submit(class='btn btn-primary w-20 mt-5') }}
+                </form> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
